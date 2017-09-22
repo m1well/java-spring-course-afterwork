@@ -1,5 +1,5 @@
 # java-spring-course-afterwork
-This repository contains an self-developed example on topics of a java spring course
+This de.m1well.spring.course.repository contains an self-developed example on topics of a java spring course
 
 # hint
 #### spring course:
