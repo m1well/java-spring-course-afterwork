@@ -9,27 +9,115 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <name>java-spring-course-afterwork-parent</name>
+    <description>Java Spring course afterwork</description>
+    <url>https://github.com/m1well/java-spring-course-afterwork</url>
+    <inceptionYear>2017</inceptionYear>
+
+    <issueManagement>
+        <url>https://github.com/m1well/java-spring-course-afterwork/issues</url>
+        <system>github</system>
+    </issueManagement>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Michael Wellner</name>
+            <url>http://www.m1well.de</url>
+            <id>m1well</id>
+        </developer>
+    </developers>
+
     <modules>
         <module>services</module>
         <module>database</module>
         <module>foundation</module>
     </modules>
-    
+
     <properties>
+        <java-version>1.8</java-version>
+        <org.springframework-version>4.3.11.RELEASE</org.springframework-version>
+        <org.slf4j-version>1.7.7</org.slf4j-version>
+        <log4j-version>1.2.17</log4j-version>
+        <junit-version>4.12</junit-version>
+        <joda-time-version>2.9.9</joda-time-version>
+        <maven.compiler.source>${java-version}</maven.compiler.source>
+        <maven.compiler.target>${java-version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
+            <exclusions>
+                <!-- exclude commons logging in favor of slf4j -->
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${org.slf4j-version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${org.slf4j-version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j-version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>${junit-version}</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- joda time -->
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
-            <version>2.9.9</version>
+            <version>${joda-time-version}</version>
         </dependency>
     </dependencies>
 

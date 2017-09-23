@@ -5,7 +5,11 @@
     <artifactId>guest-service-frontend</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>guest-service-frontend</name>
+
+    <name>--- guest-service-frontend</name>
+    <description>Java Spring course afterwork</description>
+    <url>https://github.com/m1well/java-spring-course-afterwork</url>
+    <inceptionYear>2017</inceptionYear>
 
     <build>
         <finalName>guest-service-frontend</finalName>

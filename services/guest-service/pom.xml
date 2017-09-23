@@ -12,6 +12,11 @@
     <artifactId>guest-service</artifactId>
     <packaging>pom</packaging>
 
+    <name>-- guest-service</name>
+    <description>Java Spring course afterwork</description>
+    <url>https://github.com/m1well/java-spring-course-afterwork</url>
+    <inceptionYear>2017</inceptionYear>
+
     <modules>
         <module>guest-service-backend</module>
         <module>guest-service-frontend</module>
