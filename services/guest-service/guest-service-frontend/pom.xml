@@ -11,8 +11,57 @@
     <url>https://github.com/m1well/java-spring-course-afterwork</url>
     <inceptionYear>2017</inceptionYear>
 
+    <properties>
+        <org.springframework-version>4.3.9.RELEASE</org.springframework-version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>de.m1well.spring.course</groupId>
+            <artifactId>guest-service-backend</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+    </dependencies>
+
     <build>
-        <finalName>guest-service-frontend</finalName>
+        <finalName>java-spring-course-afterwork</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>src\main\resources\webapp\WEB-INF\web.xml</webXml>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
     
 </project>
